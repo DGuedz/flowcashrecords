@@ -1,10 +1,10 @@
 # Flow Ca$h: $CORRENTES
-> Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
-
 ![Solana](https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Wormhole](https://img.shields.io/badge/Wormhole-Bridge-purple?style=for-the-badge)
+[![Pitch Deck](https://img.shields.io/badge/Docs-Pitch%20Deck-4b5563)](docs/pitch/pitch-deck.pdf)
+> Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
 
 ## 🏆 Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
 
@@ -208,10 +208,10 @@ Special thanks to:
 - **Metaplex** - NFT standard framework
 - **Brazilian Music Community** - Early supporters
 
-    ## Pitch Deck
+## Pitch Deck
 
-    - Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
-    - PDF: [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
+- Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
+- PDF: [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
 
 Para atualizar o PDF a partir do Markdown:
 ```bash
