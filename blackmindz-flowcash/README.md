@@ -225,3 +225,6 @@ npx marp --pdf docs/pitch/pitch-deck.md -o docs/pitch/pitch-deck.pdf
 "Libertando mentes, passando a visão" - Freeing minds, sharing vision
 
 Flow Ca$h Records | Cultural Patronage Protocol
+
+## Guia para Jurados
+- Leia a nossa tese em `docs/THESIS.md` para entender a estratégia central, o passo-a-passo do funcionamento, por que Solana e o checklist de avaliação.
