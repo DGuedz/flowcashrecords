@@ -209,7 +209,6 @@ Special thanks to:
 - **Brazilian Music Community** - Early supporters
 
 ## Pitch Deck
-
 - Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
 - PDF: [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
 
