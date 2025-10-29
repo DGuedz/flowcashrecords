@@ -1,4 +1,4 @@
-# Flow Ca$h: $CORRENTES 🎵
+# Flow Ca$h: $CORRENTES
 > Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
 
 ![Solana](https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white)
@@ -22,7 +22,7 @@ Flow Ca$h democratizes music rights via blockchain, delivering **100% of net roy
 
     ---
 
-## 🚀 What Makes Flow Ca$h Unique
+## What Makes Flow Ca$h Unique
 
 ### 1️⃣ Real World Asset (RWA) Tokenization
 - **Phonogram Neighboring Rights** of the track "Correntes"
@@ -142,7 +142,7 @@ Demonstration includes:
 - Cross-chain bridge via Wormhole
 - Live dashboard with portfolio tracking
 
-    ## 📚 Additional Documentation
+    ## Additional Documentation
 - 📖 [ARCHITECTURE.md](docs/architecture/) - Technical deep dive
 - 💰 [TOKENOMICS.md](flowcashrecords/TOKENOMICS.md) - Economic model
 - 📜 [CONTRACTS.md](docs/architecture/) - Smart contract specs
@@ -210,8 +210,8 @@ Special thanks to:
 
     ## Pitch Deck
 
-- **Markdown:** [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
-- **PDF:** [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
+    - Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
+    - PDF: [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
 
 Para atualizar o PDF a partir do Markdown:
 ```bash
@@ -223,6 +223,6 @@ npx marp --pdf docs/pitch/pitch-deck.md -o docs/pitch/pitch-deck.pdf
 
 **Built with ❤️ for Solana Cypherpunk Hackathon 2025**
 
-*"Libertando mentes, passando a visão" - Freeing minds, sharing vision*
+"Libertando mentes, passando a visão" - Freeing minds, sharing vision
 
-**Flow Ca$h Records | Cultural Patronage Protocol**
+Flow Ca$h Records | Cultural Patronage Protocol
