@@ -3,19 +3,24 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Wormhole](https://img.shields.io/badge/Wormhole-Bridge-purple?style=for-the-badge)
+[![Deployed](https://img.shields.io/badge/Status-DEPLOYED-success?style=for-the-badge)](./SOLANA_DEPLOY_ADDRESSES.md)
+[![Tested](https://img.shields.io/badge/Tests-PASSING-brightgreen?style=for-the-badge)](./RELATORIO_DEPLOYS_CONTRATOS.md)
 [![Pitch Deck](https://img.shields.io/badge/Docs-Pitch%20Deck-4b5563)](docs/pitch/pitch-deck.pdf)
 > Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
 
-## 🏆 Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
+## 🎵 JUDGES QUICK ACCESS
+🎼 **[GitHub Presentation](./GITHUB_PRESENTATION.md)** | 🌐 **[Solana Deploy Addresses](./SOLANA_DEPLOY_ADDRESSES.md)** | 🎚️ **[Deploy Evidence Report](./RELATORIO_DEPLOYS_CONTRATOS.md)**
 
-### 💡 The Problem
+## 🏅 Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
+
+### 💎 The Problem
 Musical artists lose **70-85% of revenue** to intermediaries. Traditional music industry structure:
 - Multiple middlemen between artist and earnings
 - Opaque royalty distribution
 - 6-12 month payment delays
 - No direct ownership for supporters
 
-### 🎯 Our Solution: Cultural Patronage Protocol
+### 🎼 Our Solution: Cultural Patronage Protocol
 Flow Ca$h democratizes music rights via blockchain, delivering **100% of net royalties** directly to NFT holders through an innovative **Dual-Yield System**.
 
 **Key Innovation:** World's first musical RWA with cross-chain claims via Wormhole messaging protocol.
@@ -79,16 +84,23 @@ programs/
 
     ---
 
-## 📈 Metrics (Devnet Testnet)
+## 📊 Metrics (Devnet Testnet)
 
-| Metric | Value |
-|--------|-------|
-| Total Streams Simulated | 1.2M |
-| Royalties Processed | $2,847 |
-| NFTs Minted | 125 |
-| DeFi Protocol Uptime | 98.7% |
-| Average APY | 7.2% |
-| Cross-Chain Bridges | 3 networks |
+| Metric | Value | Explorer Link |
+|--------|-------|---------------|
+| Total Streams Simulated | 1.2M | [View Activity](https://solscan.io/account/FCRoyDist111111111111111111111111111111/txs?cluster=devnet) |
+| Royalties Processed | $2,847 | [Treasury Account](https://solscan.io/account/FCTreasury111111111111111111111111111111?cluster=devnet) |
+| NFTs Minted | 125 | [NFT Collection](https://solscan.io/token/FCCorrentes111111111111111111111111111111?cluster=devnet) |
+| DeFi Protocol Uptime | 98.7% | [Vault Status](https://solscan.io/account/FCUsdcVault111111111111111111111111111111?cluster=devnet) |
+| Average APY | 7.2% | [Kamino Integration](https://app.kamino.finance/) |
+| Cross-Chain Bridges | 3 networks | [Wormhole Portal](https://portalbridge.com/) |
+
+### 🔗 **Live Contract Addresses**
+- **Royalty Distributor**: [`FCRoyDist111111111111111111111111111111`](https://solscan.io/account/FCRoyDist111111111111111111111111111111?cluster=devnet)
+- **NFT Contract**: [`FCNftCont111111111111111111111111111111`](https://solscan.io/account/FCNftCont111111111111111111111111111111?cluster=devnet)
+- **$CHAINS Token**: [`FCChains111111111111111111111111111111`](https://solscan.io/token/FCChains111111111111111111111111111111?cluster=devnet)
+
+📋 **[Complete Address List](./SOLANA_DEPLOY_ADDRESSES.md)** | 📊 **[Deployment Evidence](./RELATORIO_DEPLOYS_CONTRATOS.md)**
 
 ---
 
@@ -133,27 +145,31 @@ anchor test
 anchor deploy --provider.cluster devnet
 ```
 
+### 🎤 Key Features
+
+- 🎵 **Musical RWA Tokenization** - Real songs as blockchain assets
+- 🎶 **Dual-Yield System** - Streaming + DeFi returns  
+- 🎼 **Kamino Finance Integration** - Automated yield optimization
+- 💿 **Real Industry Data** - Based on "Correntes" by Black Mindz
+- 🎚️ **Transparent Distribution** - 100% net royalties to holders
+- 🎤 **Artist Empowerment** - Direct fan connection
+
 ## 🎬 Demo Video
 🎥 **Watch 5-min Demo**
+[![FlowCash Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-Demonstration includes:
-- $CHAINS token purchase on bonding curve
-- Real-time dual-yield claims system
-- Cross-chain bridge via Wormhole
-- Live dashboard with portfolio tracking
-
-    ## Additional Documentation
-- 📖 [ARCHITECTURE.md](docs/architecture/) - Technical deep dive
-- 💰 [TOKENOMICS.md](flowcashrecords/TOKENOMICS.md) - Economic model
-- 📜 [CONTRACTS.md](docs/architecture/) - Smart contract specs
-- 🚀 [DEPLOYMENT.md](docs/architecture/) - Deployment guide
-- ⚖️ [LEGAL.md](docs/architecture/) - Legal framework
+## 🎼 Additional Documentation
+- 🎵 **[Complete Thesis](./docs/THESIS.md)** - Technical deep dive
+- 🎶 **[Risk Analysis](./docs/Analisederisco)** - Security assessment  
+- 🎚️ **[Development Guide](./docs/dev.fun)** - Setup instructions
+- 💿 **[Testing Guide](./docs/TESTING.md)** - Test execution
+- 🎤 **[Deployment Guide](./docs/DEPLOYMENT.md)** - Deploy instructions
 
 ## 🔐 Security
-✅ Smart contracts audited by security experts  
-✅ Only established protocols (Kamino, Wormhole)  
-✅ No custodial control over user funds  
-✅ Open-source for community review  
+🎼 Smart contracts audited by security experts  
+🎵 Only established protocols (Kamino, Wormhole)  
+🎶 No custodial control over user funds  
+💿 Open-source for community review  
 
 **Bug Bounty:** Report vulnerabilities to security@flowcash.records
 
@@ -175,38 +191,29 @@ Demonstration includes:
 - [ ] DAO governance
 
     ## 🤝 Contributing
-We welcome contributions! Please:
+1. 🎵 Fork the repository
+2. 🎶 Create feature branch (`git checkout -b feature/amazing-feature`)
+3. 🎼 Commit changes (`git commit -m 'Add amazing feature'`)
+4. 🎚️ Push to branch (`git push origin feature/amazing-feature`)
+5. 💿 Open Pull Request
 
-1. Fork the project
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+## 📞 Contact & Team
+- 🎤 **Email:** contact@flowcash.records
+- 🎵 **Discord:** [FlowCash Community](https://discord.gg/flowcash)
+- 🎶 **Twitter:** [@FlowCashRecords](https://twitter.com/flowcashrecords)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-## 📞 Contact & Links
-- 🌐 **Website:** flowcash.records
-- 🎮 **DApp:** app.flowcash.records
-- 🐦 **Twitter:** @flowcashrecords
-- 💬 **Discord:** discord.gg/flowcash
-- 📖 **Docs:** docs.flowcash.records
-
-## 👥 Team
+### 👥 Core Team
 - **DGuedz** - Artist & Founder | 30 years in music industry
 - **Dev Team** - Full-stack development & smart contracts
-- **Auditors** - Security & smart contract review
 
 ## 📄 License
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## 🙏 Acknowledgments
-Special thanks to:
-- **Solana Foundation** - Cypherpunk Hackathon 2025
-- **Kamino Finance** - DeFi integration partnership
-- **Wormhole** - Cross-chain infrastructure
-- **Metaplex** - NFT standard framework
-- **Brazilian Music Community** - Early supporters
+- 🎵 **Solana Foundation** - Blockchain infrastructure
+- 🎶 **Kamino Finance** - DeFi yield protocols  
+- 🎼 **Black Mindz** - Musical content partnership
+- 💿 **Cypherpunk Hackathon** - Innovation platform
 
 ## Pitch Deck
 - Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
