@@ -10,6 +10,7 @@
 
 ## 🎵 JUDGES QUICK ACCESS
 🎼 **[GitHub Presentation](./GITHUB_PRESENTATION.md)** | 🌐 **[Solana Deploy Addresses](./SOLANA_DEPLOY_ADDRESSES.md)** | 🎚️ **[Deploy Evidence Report](./RELATORIO_DEPLOYS_CONTRATOS.md)**
+🎥 **[MVP on dev.fun](https://dev.fun/p/c85be3993acd67cde661)** | 📊 **[Pitch Deck](https://drive.google.com/file/d/1jHVTnFtmM2C0RpCcR-CIbgHKEo4onFur/view?usp=drive_link)**
 
 ## 🏅 Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
 

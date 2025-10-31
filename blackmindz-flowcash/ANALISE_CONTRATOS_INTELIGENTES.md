@@ -16,7 +16,6 @@
 │   ├── OptimizedMusicNFT.sol
 │   └── OptimizedRoyaltyDistributor.sol
 └── original/                  # Versões originais
-    ├── BlackStarToken.sol
     ├── GovernanceDAO.sol
     ├── MusicMarketplace.sol
     ├── MusicNFT.sol
