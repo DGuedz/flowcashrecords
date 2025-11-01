@@ -1,0 +1,28 @@
+{
+	"name": "blackmindz-flowcash",
+	"version": "1.0.0",
+	"description": "Black Mindz Flow Cash - Optimized Smart Contracts",
+	"scripts": {
+		"compile": "hardhat compile",
+		"test": "hardhat test",
+		"deploy": "hardhat run scripts/deploy.js",
+		"deploy-optimized": "hardhat run scripts/deploy-optimized.js"
+	},
+	"devDependencies": {
+		"@marp-team/marp-cli": "^4.2.3",
+		"@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+		"@nomicfoundation/hardhat-network-helpers": "^1.1.0",
+		"@nomicfoundation/hardhat-toolbox": "^6.1.0",
+		"@types/jest": "^30.0.0",
+		"hardhat": "^2.26.3",
+		"jest": "^30.2.0",
+		"ts-jest": "^29.4.5",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@openzeppelin/contracts": "^4.9.3",
+		"ethers": "^6.15.0",
+		"keccak256": "^1.0.6",
+		"merkletreejs": "^0.6.0"
+	}
+}
