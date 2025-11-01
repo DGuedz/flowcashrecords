@@ -36,6 +36,12 @@ git push           # Sincroniza com o repositório remoto no GitHub
 - `services/blockchain/docs/strategy/ROADMAP.md` — Roadmap por fases com gating via PRs.
 - `TOKENOMICS.md` — Detalhamento da tese de valor e modelo de taxas.
 
+## 4.1) Ambiente dev.fun (Referência)
+- RPC Endpoint: `https://rpc.dev.fun/c85be3993acd67cde661`
+- Devbase Endpoint: `https://devbase.dev.fun`
+- App ID: `c85be3993acd67cde661`
+- Link do MVP: `https://dev.fun/p/c85be3993acd67cde661`
+
 ## 5) Diretrizes para o Hackathon
 - Publicar evidências verificáveis (Explorer e CI) para deploys e testes.
 - Evitar números/percentuais sem fonte; quando houver, incluir links.
