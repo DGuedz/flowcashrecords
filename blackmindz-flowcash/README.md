@@ -1,300 +1,134 @@
-# Flow Ca$h: $CORRENTES
-![Solana](https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![Wormhole](https://img.shields.io/badge/Wormhole-Bridge-purple?style=for-the-badge)
-[![Deployed](https://img.shields.io/badge/Status-DEPLOYED-success?style=for-the-badge)](./SOLANA_DEPLOY_ADDRESSES.md)
-[![Tested](https://img.shields.io/badge/Tests-PASSING-brightgreen?style=for-the-badge)](./RELATORIO_DEPLOYS_CONTRATOS.md)
-[![Pitch Deck](https://img.shields.io/badge/Docs-Pitch%20Deck-4b5563)](docs/pitch/pitch-deck.pdf)
-> Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
+# Flow Ca$h: Correntes
 
-##  JUDGES QUICK ACCESS
- **[GitHub Presentation](./GITHUB_PRESENTATION.md)** | 🌐 **[Solana Deploy Addresses](./SOLANA_DEPLOY_ADDRESSES.md)** | 🎚️ **[Deploy Evidence Report](./RELATORIO_DEPLOYS_CONTRATOS.md)**
- **[MVP on dev.fun](https://dev.fun/p/c85be3993acd67cde661)** | **[Pitch Deck](https://drive.google.com/file/d/1jHVTnFtmM2C0RpCcR-CIbgHKEo4onFur/view?usp=drive_link)**
+Submissão para Solana Colosseum Hackathon 2025 e iniciativa Superteam Brasil.
 
-## Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
+Este documento apresenta a visão, arquitetura e instruções de execução do projeto Flow Ca$h, com foco em tokenização de direitos musicais (RWA) e distribuição de receitas de forma transparente e on-chain.
 
-### The Problem
-Musical artists lose **70-85% of revenue** to intermediaries. Traditional music industry structure:
-- Multiple middlemen between artist and earnings
-- Opaque royalty distribution
-- 6-12 month payment delays
-- No direct ownership for supporters
+Observação: informações sensíveis e canais privados foram removidos. Canais oficiais serão divulgados publicamente após a fase de avaliação dos hackathons.
 
-### Our Solution: Cultural Patronage Protocol
-Flow Ca$h democratizes music rights via blockchain, delivering **100% of net royalties** directly to NFT holders through an innovative **Dual-Yield System**.
+## Contexto de Hackathons
 
-**Key Innovation:** World's first musical RWA with cross-chain claims via Wormhole messaging protocol.
+- Solana Colosseum Hackathon 2025: projeto candidato na trilha RWA/DeFi, com ênfase em arquitetura escalável na Solana e integrações cross-chain.
+- Superteam Brasil: apoio comunitário e validação de produto, com foco em documentação clara, segurança e execução prática.
 
-## Testnet Performance Metrics (Validated)
+## Problema
 
-### **Live Network Performance**
-- **Transaction Throughput:** ~2.5 TPS (minting and distribution operations)
-- **Average Finality:** ~400ms per transaction
-- **Transaction Cost:** ~0.00025 SOL per operation
-- **Network Uptime:** 99.8% availability
+Artistas perdem grande parte da receita para intermediários. A distribuição é opaca, demorada e com pouca participação de apoiadores na propriedade e nos resultados.
 
-### **Cross-Chain Integration**  
-- **Wormhole Bridge Success Rate:** 98.7% (testnet validated)
-- **Cross-chain Message Latency:** <2 seconds average
-- **Bridge Transaction Cost:** ~0.001 SOL + gas fees
+## Solução
 
-### **DeFi Integration Results**
-- **Total Royalties Distributed:** 1,247.83 USDC (testnet)
-- **Kamino Finance APY:** 8.2% (conservative strategies)
-- **Yield Distribution Frequency:** Real-time on-chain
-- **Smart Contract Gas Efficiency:** 99.2% optimization
+Protocolos on-chain para tokenizar ativos musicais e distribuir 100% das receitas líquidas aos detentores de NFTs, combinando royalties com rendimento DeFi de forma transparente e auditável.
 
-### **Real Transaction Data**
-- **Program Deployments:** ✅ Successful on Devnet/Testnet
-- **NFT Minting Operations:** ✅ 100% success rate
-- **Royalty Claims Processed:** ✅ 1,247+ USDC distributed
-- **DeFi Yield Generation:** ✅ 8.2% APY achieved
+## Diferenciais
 
-## Deployment Status & Technical Validation
+- RWA musical: tokenização de direitos conexos do fonograma “Correntes”.
+- Dual-yield: royalties + juros provenientes de alocação em protocolos DeFi.
+- Cross-chain: uso de mensageria e ponte para interoperabilidade entre Solana e EVM.
 
-### 🎼 **Smart Contract Deployment**
-- **Royalty Distributor Program:** `9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM`
-- **Token Program:** `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
-- **System Program:** `11111111111111111111111111111112`
-- **Network:** Solana Devnet/Testnet
-- **Status:** ✅ Fully operational and validated
+## Arquitetura Técnica
 
-### 🎵 **Frontend Application**
-- **Live Demo:** [https://flowcash-dapp.vercel.app](https://flowcash-dapp.vercel.app)
-- **Technology Stack:** React 18 + TypeScript + Vite
-- **Wallet Integration:** Phantom, Solflare, Backpack
-- **Internationalization:** Portuguese, English, Spanish
-- **Status:** ✅ Production ready
+### Frontend
+- React + Tailwind, foco em UX simples e responsivo.
+- Integração com carteiras via `@solana/wallet-adapter`.
+- Hook de dados para métricas do token e progresso em curva de bonding.
 
-### 🎶 **DeFi Integration**
-- **Kamino Finance:** Active yield farming (8.2% APY)
-- **USDC Vault Management:** Automated reinvestment
-- **Yield Distribution:** Real-time on-chain processing
-- **Risk Management:** Conservative strategies implemented
-- **Status:** ✅ Testnet validated
+### Contratos (Rust/Anchor)
+- `royalty-distributor`: recebe royalties e processa claims dos usuários.
+- `token-factory`: criação e parametrização de ativos musicais (NFTs/RWAs).
+- `vault-manager`: integração com protocolo DeFi para rendimento adicional.
 
-### 💿 **Cross-Chain Infrastructure**
-- **Wormhole Bridge:** 98.7% success rate (testnet)
-- **Message Passing:** <2s average latency
-- **Supported Networks:** Solana ↔ Ethereum (planned)
-- **Transaction Costs:** ~0.001 SOL + gas fees
-- **Status:** ✅ Core functionality proven
+### Integrações
+- Kamino Finance (rendimento).
+- Wormhole (mensageria/ponte).
+- Metaplex (padrão NFT).
 
-### 🎤 **Monitoring & Analytics**
-- **Transaction Explorer:** [Solscan Integration](https://solscan.io/account/9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM?cluster=devnet)
-- **Real-time Metrics:** Performance dashboard active
-- **Error Tracking:** 99.2% success rate maintained
-- **Uptime Monitoring:** 99.8% network availability
-- **Status:** ✅ Comprehensive observability
+## Instalação e Setup
 
-    ---
+### Pré-requisitos
 
-## What Makes Flow Ca$h Unique
-
-### 1️⃣ Real World Asset (RWA) Tokenization
-- **Phonogram Neighboring Rights** of the track "Correntes"
-- Tracked via ISRC code: `BR-XXX-25-00001`
-- 100% transparent on-chain distribution
-- Legal structure designed for Brazilian regulation compliance
-
-### 2️⃣ Dual-Yield Revenue Model
 ```
-Streams → Royalties (ISRC tracked) → RoyaltyDistributor Contract
-↓
-Kamino Lend DeFi
-↓
-Holders earn: Royalties + DeFi Interest
+Node.js 16+
+Rust 1.70+ e Anchor CLI 0.29+
+Solana CLI 1.18+
 ```
 
-**Example:**
-- Music generates $100 in royalties/month
-- Invested in Kamino Lend at 7.2% APY
-- Holders receive: $100 + $6 interest = **106% return**
+### Frontend
 
-### 3️⃣ Cross-Chain Infrastructure (Wormhole)
-- Bridge $CHAINS tokens: Solana ⟷ EVM networks
-- Bridge NFTs: Polygon, Ethereum, BSC, Arbitrum
-- **Cross-Chain Claims:** Own NFT on Polygon, claim USDC rewards from Solana
-- Universal liquidity across ecosystems
-
----
-
-## 📊 Technical Architecture
-
-### Frontend Stack
-- **React 18.2** + Tailwind CSS - Modern, responsive UI
-- **React Router 6** - SPA navigation
-- **@solana/wallet-adapter** - Wallet integration
-- **@devfunlabs/web-sdk** - DevBase infrastructure
-
-### Smart Contracts (Rust/Anchor)
 ```
-programs/
-├── royalty-distributor/    # Core royalty management
-│   ├── deposit_royalties() # Receive royalties from DSPs
-│   ├── process_claim()     # User claims rewards
-│   └── invest_in_defi()    # Auto-invest in Kamino
-├── token-factory/          # RWA token creation
-└── vault-manager/          # DeFi vault operations
-```
-
-### Integrations
-- **Kamino Finance** - DeFi yield optimization
-- **Wormhole** - Cross-chain messaging & bridging
-- **Metaplex** - NFT standard for "Correntes" collection
-- **Pump.fun** - Bonding curve for $CHAINS token
-
-    ---
-
-## 📊 Metrics (Devnet Testnet)
-
-| Metric | Value | Explorer Link |
-|--------|-------|---------------|
-| Total Streams Simulated | 1.2M | [View Activity](https://solscan.io/account/FCRoyDist111111111111111111111111111111/txs?cluster=devnet) |
-| Royalties Processed | $2,847 | [Treasury Account](https://solscan.io/account/FCTreasury111111111111111111111111111111?cluster=devnet) |
-| NFTs Minted | 125 | [NFT Collection](https://solscan.io/token/FCCorrentes111111111111111111111111111111?cluster=devnet) |
-| DeFi Protocol Uptime | 98.7% | [Vault Status](https://solscan.io/account/FCUsdcVault111111111111111111111111111111?cluster=devnet) |
-| Average APY | 7.2% | [Kamino Integration](https://app.kamino.finance/) |
-| Cross-Chain Bridges | 3 networks | [Wormhole Portal](https://portalbridge.com/) |
-
-### 🔗 **Live Contract Addresses**
-- **Royalty Distributor**: [`FCRoyDist111111111111111111111111111111`](https://solscan.io/account/FCRoyDist111111111111111111111111111111?cluster=devnet)
-- **NFT Contract**: [`FCNftCont111111111111111111111111111111`](https://solscan.io/account/FCNftCont111111111111111111111111111111?cluster=devnet)
-- **$CHAINS Token**: [`FCChains111111111111111111111111111111`](https://solscan.io/token/FCChains111111111111111111111111111111?cluster=devnet)
-
-📋 **[Complete Address List](./SOLANA_DEPLOY_ADDRESSES.md)** | 📊 **[Deployment Evidence](./RELATORIO_DEPLOYS_CONTRATOS.md)**
-
----
-
-## 🛠️ Installation & Setup
-
-### Prerequisites
-```bash
-- Node.js 16+
-- Rust 1.70+ & Anchor CLI 0.29+
-- Solana CLI 1.18+
-- ~0.5 SOL for testnet fees
-```
-
-### Frontend Setup
-```bash
-# Clone repository
-git clone https://github.com/flowcashrecords/correntes-dapp.git
-cd correntes-dapp
-
-# Install dependencies
 npm install
-
-# Configure environment
-cp .env.example .env
-
-# Start development server
 npm run dev
 ```
 
-### Smart Contracts Build
-```bash
-# Navigate to programs directory
+### Contratos (Anchor)
+
+```
 cd programs
-
-# Build all programs
 anchor build
-
-# Run tests
 anchor test
-
-# Deploy to devnet
 anchor deploy --provider.cluster devnet
 ```
 
-### 🎤 Key Features
+## Documentação Complementar
 
-- 🎵 **Musical RWA Tokenization** - Real songs as blockchain assets
-- 🎶 **Dual-Yield System** - Streaming + DeFi returns  
-- 🎼 **Kamino Finance Integration** - Automated yield optimization
-- 💿 **Real Industry Data** - Based on "Correntes" by Black Mindz
-- 🎚️ **Transparent Distribution** - 100% net royalties to holders
-- 🎤 **Artist Empowerment** - Direct fan connection
+- `ARCHITECTURE.md`: visão técnica detalhada.
+- `TOKENOMICS.md`: modelo econômico.
+- `CONTRACTS.md`: especificação de contratos.
+- `DEPLOYMENT.md`: guia de deploy.
 
-## 🎬 Demo Video
-🎥 **Watch 5-min Demo**
-[![FlowCash Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+## Segurança
 
-## 🎼 Additional Documentation
-- 🎵 **[Complete Thesis](./docs/THESIS.md)** - Technical deep dive
-- 🎶 **[Risk Analysis](./docs/Analisederisco)** - Security assessment  
-- 🎚️ **[Development Guide](./docs/dev.fun)** - Setup instructions
-- 💿 **[Testing Guide](./docs/TESTING.md)** - Test execution
-- 🎤 **[Deployment Guide](./docs/DEPLOYMENT.md)** - Deploy instructions
+- Uso de padrões estabelecidos e auditoria externa planejada.
+- Sem custódia de fundos dos usuários.
+- Código aberto para revisão comunitária.
 
-## 🔐 Security
-🎼 Smart contracts audited by security experts  
-🎵 Only established protocols (Kamino, Wormhole)  
-🎶 No custodial control over user funds  
-💿 Open-source for community review  
+## Roadmap
 
-**Bug Bounty:** Report vulnerabilities to security@flowcash.records
+- MVP: lançamento do token, frontend funcional, contratos em desenvolvimento, integração inicial DeFi, claims em ambiente de teste, submissão aos hackathons (Colosseum/Superteam Brasil).
+- Próximas fases: mainnet, ponte cross-chain, dashboard avançado, expansão para novos RWAs, governança.
 
-## 🗺️ Roadmap
+## Contribuição
 
-### Q4 2025 - MVP (Current)
-- [x] $CHAINS token launched on Pump.fun
-- [x] Complete React frontend with i18n
-- [ ] Rust smart contracts (in development)
-- [ ] Kamino Lend integration
-- [ ] Claims system operational
-- [ ] **Hackathon submission 🎯**
+1. Fork e branch de feature.
+2. Commits objetivos.
+3. Pull Request com descrição clara.
+4. Seguir `CONTRIBUTING.md`.
 
-### Q1 2026 - Scalability
-- [ ] Mainnet launch
-- [ ] Wormhole Bridge active
-- [ ] Full dashboard Phase 3
-- [ ] TokenFactory for new RWAs
-- [ ] DAO governance
+## Licença
 
-    ## 🤝 Contributing
-1. 🎵 Fork the repository
-2. 🎶 Create feature branch (`git checkout -b feature/amazing-feature`)
-3. 🎼 Commit changes (`git commit -m 'Add amazing feature'`)
-4. 🎚️ Push to branch (`git push origin feature/amazing-feature`)
-5. 💿 Open Pull Request
-
-## 📞 Contact & Team
-- 🎤 **Email:** contact@flowcash.records
-- 🎵 **Discord:** [FlowCash Community](https://discord.gg/flowcash)
-- 🎶 **Twitter:** [@FlowCashRecords](https://twitter.com/flowcashrecords)
-
-### 👥 Core Team
-- **DGuedz** - Artist & Founder | 30 years in music industry
-- **Dev Team** - Full-stack development & smart contracts
-
-## 📄 License
-MIT License - see [LICENSE](LICENSE) file for details
-
-## 🙏 Acknowledgments
-- 🎵 **Solana Foundation** - Blockchain infrastructure
-- 🎶 **Kamino Finance** - DeFi yield protocols  
-- 🎼 **Black Mindz** - Musical content partnership
-- 💿 **Cypherpunk Hackathon** - Innovation platform
-
-## Pitch Deck
-- Markdown: [docs/pitch/pitch-deck.md](docs/pitch/pitch-deck.md)
-- PDF: [docs/pitch/pitch-deck.pdf](docs/pitch/pitch-deck.pdf)
-
-Para atualizar o PDF a partir do Markdown:
-```bash
-npm i -D @marp-team/marp-cli
-npx marp --pdf docs/pitch/pitch-deck.md -o docs/pitch/pitch-deck.pdf
-```
+MIT License (ver arquivo `LICENSE`).
 
 ---
 
-**Built with ❤️ for Solana Cypherpunk Hackathon 2025**
+## dev.fun — Prompt para MVP do Launchpad
 
-"Libertando mentes, passando a visão" - Freeing minds, sharing vision
+Objetivo: construir uma landing única para o token `$CORRENTES`, com compra simplificada e verificação de desconto para carteiras que já possuem o token.
 
-Flow Ca$h Records | Cultural Patronage Protocol
+### Stack e Setup
+- React (Vite, TypeScript) e Tailwind.
+- `@solana/wallet-adapter-react` para Phantom e Solflare.
+- `@solana/web3.js` para interações básicas.
+- SDK do `pump.fun` para compras.
 
-## Guia para Jurados
-- Leia a nossa tese em `docs/THESIS.md` para entender a estratégia central, o passo-a-passo do funcionamento, por que Solana e o checklist de avaliação.
+### Layout
+- Coluna centralizada e responsiva.
+- Header com título “Flow Ca$h — Correntes” e botão de conectar carteira.
+- `TokenStats`: market cap, ouvintes (simulado), replies.
+- `BondingCurveProgress`: barra de progresso até a meta de listagem.
+- `PriceChart`: placeholder inicial.
+- `BuyForm`: campo para SOL e botão “Comprar $CORRENTES”.
+
+### Lógica do `BuyForm`
+1. Verificar conexão de carteira.
+2. Ler o valor em SOL.
+3. Executar `buy` via SDK do `pump.fun`.
+4. Exibir estados de “processando”, “sucesso” ou “erro”.
+
+### Hook de Dados
+- `usePumpFunData(mint)`: consulta periódica à API HTTP `/coins/{mint}` a cada 10s.
+- Retorna dados para `TokenStats` e `BondingCurveProgress`.
+
+### Verificação de Desconto
+- Regra: se a carteira tiver saldo do token `$CORRENTES`, aplicar desconto de preço nos NFTs.
+- Implementar estado visual claro para “desconto disponível” e “sem desconto”.
+
+Notas finais: evitar exposição de dados sensíveis; publicar somente endpoints públicos e documentação necessária para avaliação.
