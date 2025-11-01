@@ -66,9 +66,9 @@ Evidências:
 
 ---
 
-## 🧪 TRANSAÇÕES DE TESTE IMPLEMENTADAS
+## Transações de Teste Implementadas
 
-### 📁 Arquivos de Teste Criados
+### Arquivos de Teste Criados
 
 1. `services/blockchain/tests/royalty_distributor.test.ts`
    - Simula depósito e claim com carteiras de teste.
@@ -78,26 +78,26 @@ Evidências:
    - Verifica criação de mint e metadata via Metaplex.
    - Valida ownership e integridade.
 
-### 🎯 Cenários de Teste Validados
+### Cenários de Teste Validados
 
 #### 1. Mint e Distribuição de NFTs Musicais
-Exemplo de fluxo:
-- ✅ Criação do mint via Metaplex
-- ✅ Associação de metadata com ISRC
-- ✅ Distribuição inicial para participantes
+Fluxo:
+- Criação do mint via Metaplex
+- Associação de metadata com ISRC
+- Distribuição inicial para participantes
 
 #### 2. Distribuição de Royalties (Solana)
 Fluxo esperado:
-- ✅ Depósito em `RoyaltyDistributor`
-- ✅ Claims pelos detentores de NFTs
-- ✅ Validação de saldos e recibos on-chain
+- Depósito em `RoyaltyDistributor`
+- Claims pelos detentores de NFTs
+- Validação de saldos e recibos on-chain
 
 #### 3. Governança (planejada)
 - Propostas e votação via SPL Governance ou programa próprio.
 
 ---
 
-## 🔎 MEDIÇÕES E MÉTRICAS (publicar com evidências)
+## Medições e Métricas (publicar com evidências)
 
 Em Solana, medições relevantes incluem:
 - Compute Units por instrução
@@ -110,34 +110,34 @@ Publicar sempre com:
 
 ---
 
-## 🌐 DEPLOYS EM AMBIENTES — SOLANA DEVNET/TESTNET
+## Deploys em Ambientes — Solana Devnet/Testnet
 
 ### Status Atual
-- **Cluster**: Devnet (preparar Mainnet quando aplicável)
-- **RPC primário**: `https://api.devnet.solana.com`
-- **RPC alternativo**: `https://rpc.dev.fun/<ID>` (quando disponível)
+- Cluster: Devnet (preparar Mainnet quando aplicável)
+- RPC primário: `https://api.devnet.solana.com`
+- RPC alternativo: `https://rpc.dev.fun/<ID>` (quando disponível)
 
-## EVIDÊNCIAS DE TESTE E FUNCIONAMENTO
+## Evidências de Teste e Funcionamento
 
 ### Testes de Conectividade RPC
-**Executado em**: 2025-01-29
-**Script**: `test-rpc.js`
+Executado em: 2025-01-29
+Script: `test-rpc.js`
 
-Exemplo de validações úteis:
-- `getVersion`, `getBlockHeight`, `getHealth` com latências médias.
-- Simulações de transações e instruções com compute units.
+Exemplos de validação:
+- `getVersion`, `getBlockHeight`, `getHealth` com latências médias
+- Simulações de transações e instruções com compute units
 
 ### Testes de Transações Simuladas
 Publicar resultados reais (número de testes, cenários, links de logs) quando disponíveis.
 
-Sugestão de cenários:
+Sugestões de cenários:
 - Launchpad: compra/claim com carteiras de teste
 - Bridge/DeFi: integração com Wormhole/Kamino quando aplicável
 - Claims: validação de cálculo e elegibilidade
 
 Configurações e RPCs devem ser registradas com data e ambiente.
 
-### 🚀 Execução e Validação (Solana)
+### Execução e Validação (Solana)
 - Scripts de deploy e integração devem residir em `backend/solana/` e `services/blockchain/`.
 - Publicar passos executados, Program IDs e transações com links para Explorer.
 - Manter relatórios de CI com builds/testes e logs de execução.
