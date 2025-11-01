@@ -8,50 +8,50 @@
 [![Pitch Deck](https://img.shields.io/badge/Docs-Pitch%20Deck-4b5563)](docs/pitch/pitch-deck.pdf)
 > Brazil's First Musical RWA on Solana | Cypherpunk Hackathon 2025 Submission
 
-## 🎵 JUDGES QUICK ACCESS
-🎼 **[GitHub Presentation](./GITHUB_PRESENTATION.md)** | 🌐 **[Solana Deploy Addresses](./SOLANA_DEPLOY_ADDRESSES.md)** | 🎚️ **[Deploy Evidence Report](./RELATORIO_DEPLOYS_CONTRATOS.md)**
-🎥 **[MVP on dev.fun](https://dev.fun/p/c85be3993acd67cde661)** | 📊 **[Pitch Deck](https://drive.google.com/file/d/1jHVTnFtmM2C0RpCcR-CIbgHKEo4onFur/view?usp=drive_link)**
+##  JUDGES QUICK ACCESS
+ **[GitHub Presentation](./GITHUB_PRESENTATION.md)** | 🌐 **[Solana Deploy Addresses](./SOLANA_DEPLOY_ADDRESSES.md)** | 🎚️ **[Deploy Evidence Report](./RELATORIO_DEPLOYS_CONTRATOS.md)**
+ **[MVP on dev.fun](https://dev.fun/p/c85be3993acd67cde661)** | **[Pitch Deck](https://drive.google.com/file/d/1jHVTnFtmM2C0RpCcR-CIbgHKEo4onFur/view?usp=drive_link)**
 
-## 🏅 Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
+## Solana Cypherpunk Hackathon 2025 - RWA & DeFi Track
 
-### 💎 The Problem
+### The Problem
 Musical artists lose **70-85% of revenue** to intermediaries. Traditional music industry structure:
 - Multiple middlemen between artist and earnings
 - Opaque royalty distribution
 - 6-12 month payment delays
 - No direct ownership for supporters
 
-### 🎼 Our Solution: Cultural Patronage Protocol
+### Our Solution: Cultural Patronage Protocol
 Flow Ca$h democratizes music rights via blockchain, delivering **100% of net royalties** directly to NFT holders through an innovative **Dual-Yield System**.
 
 **Key Innovation:** World's first musical RWA with cross-chain claims via Wormhole messaging protocol.
 
-## 🎼 Testnet Performance Metrics (Validated)
+## Testnet Performance Metrics (Validated)
 
-### 🎵 **Live Network Performance**
+### **Live Network Performance**
 - **Transaction Throughput:** ~2.5 TPS (minting and distribution operations)
 - **Average Finality:** ~400ms per transaction
 - **Transaction Cost:** ~0.00025 SOL per operation
 - **Network Uptime:** 99.8% availability
 
-### 🎶 **Cross-Chain Integration**  
+### **Cross-Chain Integration**  
 - **Wormhole Bridge Success Rate:** 98.7% (testnet validated)
 - **Cross-chain Message Latency:** <2 seconds average
 - **Bridge Transaction Cost:** ~0.001 SOL + gas fees
 
-### 💿 **DeFi Integration Results**
+### **DeFi Integration Results**
 - **Total Royalties Distributed:** 1,247.83 USDC (testnet)
 - **Kamino Finance APY:** 8.2% (conservative strategies)
 - **Yield Distribution Frequency:** Real-time on-chain
 - **Smart Contract Gas Efficiency:** 99.2% optimization
 
-### 🎚️ **Real Transaction Data**
+### **Real Transaction Data**
 - **Program Deployments:** ✅ Successful on Devnet/Testnet
 - **NFT Minting Operations:** ✅ 100% success rate
 - **Royalty Claims Processed:** ✅ 1,247+ USDC distributed
 - **DeFi Yield Generation:** ✅ 8.2% APY achieved
 
-## 🚀 Deployment Status & Technical Validation
+## Deployment Status & Technical Validation
 
 ### 🎼 **Smart Contract Deployment**
 - **Royalty Distributor Program:** `9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM`
