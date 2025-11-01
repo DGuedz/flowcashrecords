@@ -1,134 +1,164 @@
 # Flow Ca$h: Correntes
 
-Submissão para Solana Colosseum Hackathon 2025 e iniciativa Superteam Brasil.
+Submissão para Solana Colosseum Hackathon 2025 | Superteam Brasil
 
-Este documento apresenta a visão, arquitetura e instruções de execução do projeto Flow Ca$h, com foco em tokenização de direitos musicais (RWA) e distribuição de receitas de forma transparente e on-chain.
+[![Solana](https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white)](https://solana.com)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
+[![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org)
+[![Wormhole](https://img.shields.io/badge/Wormhole-Bridge-purple?style=for-the-badge)](https://wormhole.com)
 
-Observação: informações sensíveis e canais privados foram removidos. Canais oficiais serão divulgados publicamente após a fase de avaliação dos hackathons.
+Projeto de RWA musical na Solana: tokenização de direitos do fonograma “Correntes”, com distribuição de receitas direta e transparente aos detentores de NFTs e integração DeFi para rendimento adicional.
 
-## Contexto de Hackathons
+## Sumário
+- [Visão Geral](#visão-geral)
+- [Acesso Rápido para Jurados](#acesso-rápido-para-jurados)
+- [Ambiente dev.fun](#ambiente-devfun)
+- [Problema e Solução](#problema-e-solução)
+- [Diferenciais](#diferenciais)
+- [Arquitetura Técnica](#arquitetura-técnica)
+- [Deployment e Validação](#deployment-e-validação)
+- [Métricas e Endereços](#métricas-e-endereços)
+- [Instalação e Setup](#instalação-e-setup)
+- [Segurança](#segurança)
+- [Roadmap](#roadmap)
+- [Contribuição](#contribuição)
+- [Contato e Equipe](#contato-e-equipe)
+- [Licença](#licença)
+- [Pitch Deck](#pitch-deck)
 
-- Solana Colosseum Hackathon 2025: projeto candidato na trilha RWA/DeFi, com ênfase em arquitetura escalável na Solana e integrações cross-chain.
-- Superteam Brasil: apoio comunitário e validação de produto, com foco em documentação clara, segurança e execução prática.
+## Visão Geral
+Flow Ca$h é um protocolo de patronagem cultural que tokeniza direitos musicais e distribui 100% das receitas líquidas diretamente aos detentores, combinando royalties de streaming com rendimento proveniente de integrações DeFi.
 
-## Problema
+## Acesso Rápido para Jurados
+- Apresentação no GitHub: `./GITHUB_PRESENTATION.md`
+- Endereços de Deploy (Solana): `./SOLANA_DEPLOY_ADDRESSES.md`
+- Relatório de Evidências de Deploy: `./RELATORIO_DEPLOYS_CONTRATOS.md`
+- MVP no dev.fun: `https://dev.fun/p/c85be3993acd67cde661`
+- Pitch Deck (PDF): `https://drive.google.com/file/d/1jHVTnFtmM2C0RpCcR-CIbgHKEo4onFur/view?usp=drive_link`
 
-Artistas perdem grande parte da receita para intermediários. A distribuição é opaca, demorada e com pouca participação de apoiadores na propriedade e nos resultados.
+## Ambiente dev.fun
+- RPC Endpoint: `https://rpc.dev.fun/c85be3993acd67cde661`
+- Devbase Endpoint: `https://devbase.dev.fun`
+- App ID: `c85be3993acd67cde661`
 
-## Solução
+## Problema e Solução
+- Problema: artistas perdem grande parte da receita para intermediários; distribuição opaca e demorada; pouca participação de apoiadores na propriedade e nos resultados.
+- Solução: tokenização on-chain dos direitos do fonograma “Correntes”, distribuição direta de receitas aos detentores de NFTs e uso de cofres DeFi para rendimento adicional (dual-yield).
 
-Protocolos on-chain para tokenizar ativos musicais e distribuir 100% das receitas líquidas aos detentores de NFTs, combinando royalties com rendimento DeFi de forma transparente e auditável.
+Exemplo ilustrativo (não vinculante):
+- Receitas mensais de streaming entram no contrato `royalty-distributor`.
+- Parte das reservas é alocada em protocolo DeFi (Kamino), gerando juros.
+- Detentores podem fazer claim dos royalties + juros acumulados de forma transparente, on-chain.
 
 ## Diferenciais
-
-- RWA musical: tokenização de direitos conexos do fonograma “Correntes”.
-- Dual-yield: royalties + juros provenientes de alocação em protocolos DeFi.
-- Cross-chain: uso de mensageria e ponte para interoperabilidade entre Solana e EVM.
+- RWA musical: direitos conexos do fonograma “Correntes” tokenizados.
+- Dual-yield: royalties + rendimento DeFi, com lógica de distribuição clara.
+- Interoperabilidade: mensageria e ponte cross-chain (Wormhole) para ampliar liquidez e acessos.
 
 ## Arquitetura Técnica
 
 ### Frontend
-- React + Tailwind, foco em UX simples e responsivo.
-- Integração com carteiras via `@solana/wallet-adapter`.
-- Hook de dados para métricas do token e progresso em curva de bonding.
+- React + TypeScript + Vite e Tailwind CSS.
+- Integração de carteira: Phantom, Solflare, Backpack via `@solana/wallet-adapter`.
+- Hook de dados: métricas do token e progresso da curva de bonding (dev.fun / pump.fun).
 
 ### Contratos (Rust/Anchor)
 - `royalty-distributor`: recebe royalties e processa claims dos usuários.
-- `token-factory`: criação e parametrização de ativos musicais (NFTs/RWAs).
+- `token-factory`: criação de ativos musicais (NFTs/RWAs) e parâmetros.
 - `vault-manager`: integração com protocolo DeFi para rendimento adicional.
 
 ### Integrações
-- Kamino Finance (rendimento).
-- Wormhole (mensageria/ponte).
-- Metaplex (padrão NFT).
+- Kamino Finance: rendimento DeFi.
+- Wormhole: mensageria/bridging cross-chain.
+- Metaplex: padrão NFT.
+
+Documentação complementar:
+- `./docs/ARCHITECTURE.md`
+- `./docs/TOKENOMICS.md`
+- `./docs/CONTRACTS.md`
+- `./docs/DEPLOYMENT.md`
+- `./docs/dev.fun`
+
+## Deployment e Validação
+- Endereços e artefatos de deploy: `./SOLANA_DEPLOY_ADDRESSES.md`.
+- Evidências de deploy e testes: `./RELATORIO_DEPLOYS_CONTRATOS.md`.
+- Links para exploradores e relatórios oficiais serão adicionados conforme validações públicas.
+
+## Métricas e Endereços
+Este repositório evita divulgar métricas numéricas sem validação pública. Os dados quantitativos (performance, custos, APY, distribuições) serão publicados somente com evidências verificáveis.
+
+Referências:
+- Endereços: `./SOLANA_DEPLOY_ADDRESSES.md`.
+- Evidências: `./RELATORIO_DEPLOYS_CONTRATOS.md`.
 
 ## Instalação e Setup
 
 ### Pré-requisitos
-
 ```
 Node.js 16+
 Rust 1.70+ e Anchor CLI 0.29+
 Solana CLI 1.18+
 ```
 
-### Frontend
-
+### Frontend (apps/web ou correntes-launchpad)
 ```
+# Instalar dependências
 npm install
+
+# Ambiente
+cp .env.example .env
+
+# Desenvolvimento
 npm run dev
 ```
 
 ### Contratos (Anchor)
-
 ```
-cd programs
+cd backend/solana
 anchor build
 anchor test
 anchor deploy --provider.cluster devnet
 ```
 
-## Documentação Complementar
-
-- `ARCHITECTURE.md`: visão técnica detalhada.
-- `TOKENOMICS.md`: modelo econômico.
-- `CONTRACTS.md`: especificação de contratos.
-- `DEPLOYMENT.md`: guia de deploy.
+### Contratos (Solidity / Hardhat)
+```
+# Na raiz do projeto
+npx hardhat compile
+npx hardhat test
+```
 
 ## Segurança
-
 - Uso de padrões estabelecidos e auditoria externa planejada.
 - Sem custódia de fundos dos usuários.
 - Código aberto para revisão comunitária.
 
 ## Roadmap
-
-- MVP: lançamento do token, frontend funcional, contratos em desenvolvimento, integração inicial DeFi, claims em ambiente de teste, submissão aos hackathons (Colosseum/Superteam Brasil).
+- MVP: lançamento do token, frontend funcional, contratos em desenvolvimento, integração inicial DeFi, claims em ambiente de teste, submissão a hackathons (Colosseum/Superteam Brasil).
 - Próximas fases: mainnet, ponte cross-chain, dashboard avançado, expansão para novos RWAs, governança.
 
 ## Contribuição
-
-1. Fork e branch de feature.
-2. Commits objetivos.
-3. Pull Request com descrição clara.
+1. Fork e criação de branch de feature.
+2. Commits objetivos e descritivos.
+3. Pull Request com contexto, testes e impacto.
 4. Seguir `CONTRIBUTING.md`.
 
+## Contato e Equipe
+- Email de contato: `contact@flowcash.records`
+- Comunidade (Discord/Twitter): divulgados após avaliação pública.
+
+Equipe:
+- DGuedz — artista e fundador.
+- Dev Team — full-stack e contratos inteligentes.
+
 ## Licença
+MIT License (ver `./LICENSE`).
 
-MIT License (ver arquivo `LICENSE`).
+## Pitch Deck
+- Markdown: `./docs/pitch/pitch-deck.md`
+- PDF: `./docs/pitch/pitch-deck.pdf`
 
----
-
-## dev.fun — Prompt para MVP do Launchpad
-
-Objetivo: construir uma landing única para o token `$CORRENTES`, com compra simplificada e verificação de desconto para carteiras que já possuem o token.
-
-### Stack e Setup
-- React (Vite, TypeScript) e Tailwind.
-- `@solana/wallet-adapter-react` para Phantom e Solflare.
-- `@solana/web3.js` para interações básicas.
-- SDK do `pump.fun` para compras.
-
-### Layout
-- Coluna centralizada e responsiva.
-- Header com título “Flow Ca$h — Correntes” e botão de conectar carteira.
-- `TokenStats`: market cap, ouvintes (simulado), replies.
-- `BondingCurveProgress`: barra de progresso até a meta de listagem.
-- `PriceChart`: placeholder inicial.
-- `BuyForm`: campo para SOL e botão “Comprar $CORRENTES”.
-
-### Lógica do `BuyForm`
-1. Verificar conexão de carteira.
-2. Ler o valor em SOL.
-3. Executar `buy` via SDK do `pump.fun`.
-4. Exibir estados de “processando”, “sucesso” ou “erro”.
-
-### Hook de Dados
-- `usePumpFunData(mint)`: consulta periódica à API HTTP `/coins/{mint}` a cada 10s.
-- Retorna dados para `TokenStats` e `BondingCurveProgress`.
-
-### Verificação de Desconto
-- Regra: se a carteira tiver saldo do token `$CORRENTES`, aplicar desconto de preço nos NFTs.
-- Implementar estado visual claro para “desconto disponível” e “sem desconto”.
-
-Notas finais: evitar exposição de dados sensíveis; publicar somente endpoints públicos e documentação necessária para avaliação.
+Gerar PDF a partir do Markdown:
+```
+npm i -D @marp-team/marp-cli
+npx marp --pdf docs/pitch/pitch-deck.md -o docs/pitch/pitch-deck.pdf
+```
